@@ -1,0 +1,8 @@
+				<div>
+					<li>ID:<input id="inp1" type="text" placeholder="請填入關鍵字"/></li>
+					<li>班名:<input id="inp1" type="text" placeholder="請填入關鍵字"/></li>
+					<li>學年度:<input id="inp1" type="text" placeholder="請填入關鍵字"/></li>
+					<li>隸屬學校:<input id="inp1" type="text" placeholder="請填入關鍵字"/></li>
+					<li>隸屬院所:<input id="inp1" type="text" placeholder="請填入關鍵字"/></li>
+					<li>備註:<input id="inp1" type="text" placeholder="請填入關鍵字"/></li>					
+				</div>

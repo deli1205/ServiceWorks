@@ -1,0 +1,129 @@
+<html>
+<!-------------------------------------------------------->
+<!---------------------Java script------------------------------->
+<!-------------------------------------------------------->
+<script type="text/javascript">
+function ask() {
+    var x;
+    if (confirm("確定儲存修改?") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+}
+
+function clr(){
+    if (confirm("確定清除全部?") == true) {
+      document.location.href="UserInfo.html";
+    } else {
+    }
+}
+</script>
+<!-------------------------------------------------------->
+<!---------------------Java script------------------------------->
+<!-------------------------------------------------------->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>編輯個人資訊</title>
+<link href="style/style01.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="wrap">
+		<div id="btb" onClick="clr()">
+        	<div class="btb" title="清空" ><p>Clear</p></div>
+        </div>
+    	<div id="edit-user-info">
+            <p class="choiceword">編輯個人資料</p>
+        	<table>
+               	<tr>
+           		  <td colspan="2" class="edit-image"> 
+                    <p><img src="img/設定圖片.png"></p>           	
+               	  </td>
+           	 	</tr>
+        		<tr>
+            		<td class="label"> 
+                    	稱呼               	
+                	</td>
+                	<td class="edit">
+                    	姓名：<input type="text" name="" />
+                        暱稱：<input type="text" name="" />
+                	</td>
+           	 	</tr>
+                <tr>
+            		<td class="label">
+                    	性別                	
+                	</td>
+                	<td class="edit">
+                    	<form>
+						<input type="radio" name="sex" value="male" /> Male
+                        </br>
+						<input type="radio" name="sex" value="female" /> Female
+						</form>
+                	</td>
+           	 	</tr>
+                <tr>
+            		<td class="label">
+                    	生日                	
+                	</td>
+                	<td class="edit">
+                    	<input type="number" name="" style="width:80px" />年
+                        <input type="number" name="" style="width:80px" />月
+                        <input type="number" name="" style="width:80px" />日
+                	</td>
+           	 	</tr>
+                <tr>
+            		<td class="label">
+                    	連絡電話               	
+                	</td>
+                	<td class="edit">
+                    	<input type="text" name="" />
+                	</td>
+           	 	</tr>
+                <tr>
+            		<td class="label">
+                    	E-mail                	
+                	</td>
+                	<td class="edit">
+                    	<input type="text" name="" style="width:300px" />
+                	</td>
+           	 	</tr>
+              <!----  <tr>
+            		<td class="label">
+                    	課程影片                	
+                	</td>
+                	<td class="edit">
+            			<div class="input-file">
+   							<input type="text" name="" /> 
+         					<input type="button" value="上傳" /> 
+            			</div>
+                	</td>
+           	 	</tr> ---->
+             <!----   <tr>
+            		<td class="label">
+                    	課程檔案                	
+                	</td>
+                	<td class="edit">
+            			<div class="input-file">
+   							<input type="text" name="" /> 
+         					<input type="button" value="上傳" /> 
+            			</div>
+                	</td>
+           	 	</tr> ---->
+                <tr>
+            		<td class="label">
+                    	自我介紹                	
+                	</td>
+                	<td class="edit-content">
+                    	<TextArea Cols="20" Rows="5" Name="自我介紹"></TextArea>
+                	</td>
+           	 	</tr>
+        	</table>
+        </div>
+        <div id="btn" onClick="ask()">
+            <a href="UserInfo.html" title="儲存"><div class="btn"><p>Save</p></div></a>
+        </div>
+    </div>
+</body>
+</html>

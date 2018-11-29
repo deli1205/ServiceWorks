@@ -1,0 +1,748 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理者模式</title>
+<link href="style/style01.css" rel="stylesheet" type="text/css" id="css">
+<script type="text/javascript" src="jquery-1.12.2.js"></script>
+
+<script>
+var tabname;
+var NowStatus;
+var thisId;
+var space;
+var i;
+var nowId;
+var ccid;
+
+function logout() 
+{
+    var x;
+    if (confirm("確定登出?") == true) {
+        document.location.href="index.html";
+    } else {
+        x = "You pressed Cancel!";
+    }
+	
+}
+
+
+function addregistration2()
+{
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","select.php?tabname=registrationtab&qid="+thisId,true);
+	xmlhttp.send();
+}
+function addregistration()
+{
+	document.getElementById("status3").innerHTML=" <div id=\"EditPanel\"><li>學年度:<input id=\"inputYear\" type=\"text\" placeholder=\"選擇開課學年\"/></li><li>學期:<input id=\"inputSeason\" type=\"text\" placeholder=\"選擇開課學期\"/></li><li>課程ID:<input id=\"inputCid\" type=\"text\" placeholder=\"選擇課程\"/></li><li>老師ID:<input id=\"inputTid\" type=\"text\" placeholder=\"選擇老師\"/></li><li>授課班級ID:<input id=\"inputClassid\" type=\"text\" placeholder=\"選擇授課班級\"/></li><li class=\"addbtn\"><input id=\"addbtn\" type=\"button\" onClick=\"AddtoRegistrationTab()\" value=\"add\"/></li></div>";
+}
+function AddtoRegistrationTab()
+{
+	year = $("#inputYear").val();
+	season = $("#inputSeason").val();
+	cid = $("#inputCid").val();
+	tid = $("#inputTid").val();
+	classid = $("#inputClassid").val();	
+	alert("Value: " + year +"." +season +"." +cid +"." +tid +"." +classid);	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?status=1&l=0&tabname=registrationtab&act=add&d1="+year+"&d2="+season+"&d3="+cid+"&d4="+tid+"&d5="+classid+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function updataregistration(dst)
+{
+	thisId=dst;
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","updataData.php?tabname=registrationtab&qid="+thisId,true);
+	xmlhttp.send();
+}
+function UpdataRegistrationTab()
+{
+	year = $("#inputYear").val();
+	season = $("#inputSeason").val();
+	cid = $("#inputCid").val();
+	tid = $("#inputTid").val();
+	classid = $("#inputClassid").val();	
+	alert("Value: " + year +"." +season +"." +cid +"." +tid +"." +classid);	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?status=1&l=0&tabname=registrationtab&act=upda&d1="+year+"&d2="+season+"&d3="+cid+"&d4="+tid+"&d5="+classid+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function DeleteRegistration(dst)
+{
+	if ( confirm ("確定刪除該筆資料?") )
+　　{	　
+		var xmlhttp;	
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=1&l=0&tabname=registrationtab&act=del&qid="+dst,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else　{　alert("ㄏㄏ" );　  }
+}
+
+
+
+
+function addyear()
+{
+	document.getElementById("status3").innerHTML="<div id=\"EditPanel\"><li>學年度:<input id=\"inputYear\" type=\"text\" placeholder=\"請填入學年\"/></li><li>學期:<input id=\"inputSeason\" type=\"text\" placeholder=\"請填入學期\"/></li><li>備註:<input id=\"inputNote\" type=\"text\" placeholder=\"備註事項\"/></li><li class=\"addbtn\"><input id=\"addbtn\" type=\"button\" onClick=\"AddtoYearTab()\" value=\"add\"/></li></div>";	
+}
+function AddtoYearTab()
+{
+	year = $("#inputYear").val();
+	season = $("#inputSeason").val();
+	note = $("#inputNote").val();
+	alert("Value: " + year +"." +season +","+note);	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?status=1&l=0&tabname=yeartab&act=add&d1="+year+"&d2="+season+"&d3="+note+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function updatayear(dst)
+{
+	thisId=dst;
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","updataData.php?tabname=yeartab&qid="+thisId,true);
+	xmlhttp.send();
+}
+function UpdataYearTab()
+{
+	year = $("#inputYear").val();
+	season = $("#inputSeason").val();
+	note = $("#inputNote").val();
+	alert("Value: " + year +"." +season +","+note);	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?status=1&l=0&tabname=yeartab&act=upda&d1="+year+"&d2="+season+"&d3="+note+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function DeleteYear(dst)
+{
+	if ( confirm ("確定刪除該筆資料?") )
+　　{	　
+		var xmlhttp;	
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=1&l=0&tabname=yeartab&act=del&qid="+dst,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else　{　alert("ㄏㄏ" );　  }
+}
+
+
+
+function addclass()
+{
+	document.getElementById("status3").innerHTML="<div id=\"EditPanel\"><li>ID:<input id=\"inputID\" type=\"text\" placeholder=\"請填入班級ID\"/></li><li>班名:<input id=\"inputName\" type=\"text\" placeholder=\"請填入班級名稱\"/></li><li>學年度:<input id=\"inputYear\" type=\"text\" placeholder=\"請填入學年度\"/></li><li>隸屬學校:<input id=\"inputSchool\" type=\"text\" placeholder=\"請填入隸屬的學校\"/></li><li>隸屬院所:<input id=\"inputDepartment\" type=\"text\" placeholder=\"請填入隸屬的院所\"/></li><li>備註:<input id=\"inputNote\" type=\"text\" placeholder=\"備註事項\"/></li><li class=\"addbtn\"><input id=\"addbtn\" type=\"button\" onClick=\"AddtoClassTab()\" value=\"add\"/></li></div>";	
+}
+function AddtoClassTab()
+{
+	cid = $("#inputID").val();
+	cname = $("#inputName").val();
+	cyear = $("#inputYear").val();
+	school = $("#inputSchool").val();
+	depart = $("#inputDepartment").val();
+	note = $("#inputNote").val();
+	alert("Value:" + cid +"." +cname+"." +cyear+"." +school+"." +depart+"."+note);
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?&l=0&tabname=classtab&act=add&d1="+cid+"&d2="+cname+"&d3="+cyear+"&d4="+school+"&d5="+depart+"&d6="+note,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function updataclass(dst)
+{
+	thisId=dst;
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","updataData.php?tabname=classtab&qid="+thisId,true);
+	xmlhttp.send();
+}
+function UpdataClassTab()
+{
+	cid = $("#inputID").val();
+	cname = $("#inputName").val();
+	cyear = $("#inputYear").val();
+	school = $("#inputSchool").val();
+	depart = $("#inputDepartment").val();
+	note = $("#inputNote").val();
+	alert("Value: " + cid +"." +cname+"." +cyear+"." +school+"." +depart+"."+note );	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?&l=0&tabname=classtab&act=upda&qid="+thisId+"&d1="+cid+"&d2="+cname+"&d3="+cyear+"&d4="+school+"&d5="+depart+"&d6="+note,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function DeleteClass(dst)
+{
+	if ( confirm ("確定刪除該筆資料?") )
+　　{	　
+		var xmlhttp;	
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?&l=0&tabname=classtab&act=del&cid="+dst,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else　{　alert("ㄏㄏ" );　  }
+}
+	
+
+
+
+	
+function addcourse()
+{
+	document.getElementById("status3").innerHTML="<div id=\"EditPanel\"><li>ID:<input id=\"inputID\" type=\"text\" placeholder=\"請填入課程ID\"/></li><li>課程名稱:<input id=\"inputName\" type=\"text\" placeholder=\"請填入課程名稱\"/></li><li>備註:<input id=\"inputNote\" type=\"text\" placeholder=\"備註事項\"/></li><li class=\"addbtn\"><input id=\"addbtn\" type=\"button\" onClick=\"AddtoCourseTab()\" value=\"add\"/></li></div>";	
+}
+function AddtoCourseTab()
+{
+	cid = $("#inputID").val();
+	cname = $("#inputName").val();
+	note = $("#inputNote").val();
+	alert("Value: " + cid +"." +cname+"."+note );	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?&l=0&tabname=coursetab&act=add&d1="+cid+"&d2="+cname+"&d3="+note,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function updatacourse(dst)
+{
+	thisId=dst;
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","updataData.php?tabname=coursetab&qid="+thisId,true);
+	xmlhttp.send();
+}
+function UpdataCourseTab()
+{
+	cid = $("#inputID").val();
+	cname = $("#inputName").val();
+	note = $("#inputNote").val();
+	alert("Value: " + cid +"." +cname+"."+note );	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?&l=0&tabname=coursetab&act=upda&d1="+cid+"&d2="+cname+"&d3="+note+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function DeleteCourse(dst)
+{
+	if ( confirm ("確定刪除該筆資料?") )
+　　{	　
+		var xmlhttp;	
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?&l=0&tabname=coursetab&act=del&qid="+dst,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else　{　alert("ㄏㄏ" );　  }
+}
+
+
+
+
+
+function addstudent()
+{
+	if(NowStatus==3||NowStatus==2)
+	{	
+		document.getElementById("status4").innerHTML="<div id=\"EditPanel\"><li>學號(ID):<input id=\"inputID\" type=\"text\" placeholder=\"請填入學號(ID)\"/></li><li>姓名:<input id=\"inputName\" type=\"text\" placeholder=\"請填入學生姓名\"/></li><li>手機:<input id=\"inputTele\" type=\"text\" placeholder=\"請填入學生手機號碼\"/></li><li>Email:<input id=\"inputEmail\" type=\"text\" placeholder=\"請填入學生的電子信箱\"/></li><li>戶籍:<input id=\"inputAddr\" type=\"text\" placeholder=\"請填入學生戶籍\"/></li><li>備註:<input id=\"inputNote\" type=\"text\" placeholder=\"備註事項\"/></li><li class=\"addbtn\"><input id=\"addbtn\" type=\"button\" onClick=\"AddtoStudentTab()\" value=\"add\"/></li></div>";	
+	}
+	else
+	{	document.getElementById("status3").innerHTML="<div id=\"EditPanel\"><li>學號(ID):<input id=\"inputID\" type=\"text\" placeholder=\"請填入學號(ID)\"/></li><li>姓名:<input id=\"inputName\" type=\"text\" placeholder=\"請填入學生姓名\"/></li><li>班級ID:<input id=\"inputClass\" type=\"text\" placeholder=\"請填入學生班級ID\"/></li><li>手機:<input id=\"inputTele\" type=\"text\" placeholder=\"請填入學生手機號碼\"/></li><li>Email:<input id=\"inputEmail\" type=\"text\" placeholder=\"請填入學生的電子信箱\"/></li><li>戶籍:<input id=\"inputAddr\" type=\"text\" placeholder=\"請填入學生戶籍\"/></li><li>備註:<input id=\"inputNote\" type=\"text\" placeholder=\"備註事項\"/></li><li class=\"addbtn\"><input id=\"addbtn\" type=\"button\" onClick=\"AddtoStudentTab()\" value=\"add\"/></li></div>";	
+	}
+}
+function AddtoStudentTab()
+{
+	sid = $("#inputID").val();
+	sname = $("#inputName").val();
+	cid = $("#inputClass").val();
+	tele = $("#inputTele").val();
+	email = $("#inputEmail").val();
+	addr = $("#inputAddr").val();
+	note = $("#inputNote").val();
+	alert("Value: " + sid +"." +sname+"." +cid+"." +tele+"." +email+"."+addr+","+note+","+	NowStatus);	
+	var xmlhttp;
+	if(NowStatus==3||NowStatus==2)
+	{
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=2&l="+space+"&tabname=studenttab&act=add&d1="+sid+"&d2="+sname+"&d3="+ccid+"&d4="+tele+"&d5="+email+"&d6="+addr+"&d7="+note+"&t="+ccid,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{		
+				document.getElementById("status3").innerHTML="";
+				document.getElementById("status3").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else
+	{
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=1&l=0&tabname=studenttab&act=add&d1="+sid+"&d2="+sname+"&d3="+cid+"&d4="+tele+"&d5="+email+"&d6="+addr+"&d7="+note+"&t="+thisId,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{		
+				document.getElementById("status2").innerHTML="";
+				document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}	
+}
+function updatastudent(dst)
+{
+	thisId=dst;
+	var xmlhttp;	
+	if(NowStatus==3||NowStatus==2)
+	{
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status4").innerHTML="";
+			document.getElementById("status4").innerHTML=xmlhttp.responseText;
+			}
+		}
+		xmlhttp.open("GET","updataData.php?status=2&tabname=studenttab&qid="+thisId,true);
+		xmlhttp.send();
+	}
+	else if(NowStatus==1)
+	{
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","updataData.php?status=1&tabname=studenttab&qid="+thisId,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+
+
+}
+function UpdataStudentTab()
+{
+	sid = $("#inputID").val();
+	sname = $("#inputName").val();
+	cid = $("#inputClass").val();
+	tele = $("#inputTele").val();
+	email = $("#inputEmail").val();
+	addr = $("#inputAddr").val();
+	note = $("#inputNote").val();
+	alert("Value: " + sid +"." +sname+"." +cid+"." +tele+"." +email+"."+addr+","+note+","+	NowStatus);	
+	var xmlhttp;
+	if(NowStatus==3||NowStatus==2)
+	{
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=2&l="+space+"&tabname=studenttab&act=upda&d1="+sid+"&d2="+sname+"&d3="+ccid+"&d4="+tele+"&d5="+email+"&d6="+addr+"&d7="+note+"&qid="+thisId+"&t="+ccid,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{		
+				document.getElementById("status3").innerHTML="";
+				document.getElementById("status3").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else
+	{
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=1&l=0&tabname=studenttab&act=upda&d1="+sid+"&d2="+sname+"&d3="+cid+"&d4="+tele+"&d5="+email+"&d6="+addr+"&d7="+note+"&qid="+thisId,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{		
+				document.getElementById("status2").innerHTML="";
+				document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}	
+}
+function DeleteStudent(dst)
+{
+	if ( confirm ("確定刪除該筆資料?") )
+　　{	if(NowStatus==3||NowStatus==2)
+		{
+			var xmlhttp;	
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","test2.php?status=2&l="+space+"&tabname=studenttab&act=del&qid="+dst+"&t="+ccid,true);
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{	
+				document.getElementById("status3").innerHTML="";
+				document.getElementById("status3").innerHTML=xmlhttp.responseText;
+				}
+			}
+		}
+		else
+		{
+			var xmlhttp;	
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open("GET","test2.php?status=1&l=0&tabname=studenttab&act=del&qid="+dst,true);
+			xmlhttp.send();
+			xmlhttp.onreadystatechange=function()
+			{
+				if (xmlhttp.readyState==4 && xmlhttp.status==200)
+				{	
+				document.getElementById("status2").innerHTML="";
+				document.getElementById("status2").innerHTML=xmlhttp.responseText;
+				}
+			}
+		}　
+	}
+	else　{　alert("ㄏㄏ" );　  }
+}
+
+
+
+
+
+function addteacher()
+{
+	document.getElementById("status3").innerHTML="<div id=\"EditPanel\"><li>ID:<input id=\"inputID\" type=\"text\" placeholder=\"請填入ID\"/></li><li>姓名:<input id=\"inputName\" type=\"text\" placeholder=\"請填入老師姓名\"/></li><li>Email:<input id=\"inputEmail\" type=\"text\" placeholder=\"請填入老師的聯絡信箱\"/></li><li>手機:<input id=\"inputTele\" type=\"text\" placeholder=\"請填入老師手機號碼\"/></li><li>備註:<input id=\"inputNote\" type=\"text\" placeholder=\"備註事項\"/></li><li class=\"addbtn\" ><input id=\"addbtn\" type=\"button\" onClick=\"AddtoTeacherTab()\" value=\"add\"/></li></div>";	
+}
+function AddtoTeacherTab()
+{
+	tid = $("#inputID").val();
+	tname = $("#inputName").val();
+	email = $("#inputEmail").val();	
+	tele = $("#inputTele").val();
+	note = $("#inputNote").val();
+	alert("Value: " + tid +"." +tname+"." +tele+"." +email+","+note );	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?status=1&l=0&tabname=teachertab&act=add&d1="+tid+"&d2="+tname+"&d3="+email+"&d4="+tele+"&d5="+note+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function updatateacher(dst)
+{
+	thisId=dst;
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status3").innerHTML="";
+			document.getElementById("status3").innerHTML=xmlhttp.responseText;
+		}
+	}
+	xmlhttp.open("GET","updataData.php?tabname=teachertab&qid="+thisId,true);
+	xmlhttp.send();
+}
+function UpdataTeacherTab()
+{
+	tid = $("#inputID").val();
+	tname = $("#inputName").val();
+	email = $("#inputEmail").val();	
+	tele = $("#inputTele").val();
+	note = $("#inputNote").val();
+	alert("Value: " + tid +"." +tname+"." +tele+"." +email+","+note );	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	xmlhttp.open("GET","test2.php?status=1&l=0&tabname=teachertab&act=upda&d1="+tid+"&d2="+tname+"&d3="+email+"&d4="+tele+"&d5="+note+"&qid="+thisId,true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+function DeleteTeacher(dst)
+{
+	if ( confirm ("確定刪除該筆資料?") )
+　　{	　
+		var xmlhttp;	
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.open("GET","test2.php?status=1&l=0&tabname=teachertab&act=del&qid="+dst,true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+			{	
+			document.getElementById("status2").innerHTML="";
+			document.getElementById("status2").innerHTML=xmlhttp.responseText;
+			}
+		}
+	}
+	else　{　alert("ㄏㄏ" );　  }
+}
+
+
+
+
+function Select(t1,t2,t3)
+{
+    tabname=t1;
+	NowStatus=t2;
+	thisId=t3;
+    //變色
+
+	if (NowStatus==1)
+	{
+		$("#status1").each(function() {                              
+			$("#status1 li").css('background', 'rgba(100%,100%,100%,0.5)');		
+		});
+		$("#"+thisId).css('background', 'rgba(90%,95%,90%,1.0)');		
+		showlist(t1,1,t3);
+		if(thisId==nowId){}
+		else{document.getElementById("status3").innerHTML=""; }	
+	}
+	if (NowStatus==2)
+	{
+		ccid=t3;
+		$("#status2").each(function() {                              
+			$("#status2 tr").css('background', 'rgba(100%,100%,100%,0.5)');		
+		});
+		$("#"+thisId).css('background', 'rgba(90%,95%,90%,1.0)');
+		if(thisId==nowId){}		
+		else{
+		document.getElementById("status3").innerHTML="";
+		document.getElementById("status4").innerHTML=""; }			
+	}
+	if (NowStatus==3)
+	{
+		$("#status3").each(function() {                              
+			$("#status3 tr").css('background', 'rgba(100%,100%,100%,0.5)');				
+		});	
+		$("#status3").each(function() {	
+				$("#status3 #space").css('background','none');										
+		});			
+		$("#status3").each(function() {	
+				$("#space .space").css('background','none');										
+		});	 						
+		$("#"+thisId).css('background', 'rgba(90%,95%,90%,1.0)');
+		if(thisId==nowId){}
+		else{document.getElementById("status4").innerHTML=""; }			
+	}
+}
+
+
+
+function showlist(t1,t2,t3)
+{
+	tabname=t1;
+	NowStatus=t2;
+	thisId=t3
+	space = $("#"+thisId).attr("name");
+	
+	var xmlhttp;	
+	xmlhttp=new XMLHttpRequest();
+	if(t2==2)
+	{
+		xmlhttp.open("GET","test2.php?act=i&status=2&tabname="+tabname+"&t="+thisId+"&l="+space,true);
+	}
+	else
+	{
+		xmlhttp.open("GET","test2.php?act=i&status=1&l=0&tabname="+t1,true);
+	}
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if (xmlhttp.readyState==4 && xmlhttp.status==200)
+		{	
+			temp=t2+1;
+			document.getElementById("status"+temp).innerHTML="";
+			document.getElementById("status"+temp).innerHTML=xmlhttp.responseText;
+		}
+	}
+}
+</script>
+</head>
+
+<!-------------------------------------------------------->
+<!---------------------Body------------------------------->
+<!-------------------------------------------------------->
+<body>
+	<div class="wrap">
+        	<div id="manager-bg">
+<!-----------------------標題區塊-------------------------->
+		<header>
+            <a href="TeacherManager.html">
+        		<img src="img/swc_logo.png">
+            </a>        
+     	</header>
+
+<!-----------------------橫選單-------------------------->        
+		<nav>
+		</nav>
+       	
+<!-----------------------內容-------------------------->
+
+			<div></div>
+            <div id="status1"> 
+          		<li id="RegistrationManager"  onClick="Select('registrationtab',1,this.id)">選課管理</li>   
+				<li id="YearManager"  onClick="Select('yeartab',1,this.id)">學期管理</li>  
+          		<li id="ClassManager" 	 onClick="Select('classtab',1,this.id)">  班級管理</li>             
+          		<li id="CourseManager"   onClick="Select('coursetab',1,this.id)"> 課程管理</li>
+          		<li id="StudentManager"  onClick="Select('studenttab',1,this.id)">學生管理</li>
+          		<li id="TeacherManager"  onClick="Select('teachertab',1,this.id)">教師管理</li> 				
+                <li onClick="logout()">登出</li>           
+            </div>
+			<div id="status2">
+
+			</div>
+			<div id="status3"></div>
+			<div id="status4"></div>                        
+        
+<!-----------------------底部相關資訊------------------------->
+       </div>
+    </div>
+</body>
+</html>

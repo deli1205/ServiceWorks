@@ -1,0 +1,49 @@
+<html>
+<script type="text/javascript">
+var c=0
+var t
+function mouseOver()
+{
+	if(c==0)
+	{document.b1.src="img/bg/2015-10-26-roman-005.jpg"}
+	if(c==1)
+	{document.b1.src="img/bg/2015-09-21-abigailkeenan-001.jpg"}
+	if(c==2)
+	{document.b1.src="img/bg/2015-10-23-roman-004.jpg"}
+	if(c==3)
+	{
+		document.b1.src="img/bg/Umberto Cofini.jpg"
+		c=0
+		clearTimeout(t);
+	}
+	c=c+1
+	t=setTimeout("mouseOver()",1000)
+}
+
+function mouseOut()
+{
+setTimeout("document.getElementById('txt').value=0",0);
+clearTimeout(t);
+}
+</script>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>首頁</title>
+<link href="style/style01.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="wrap">
+  	  <div id="index">
+      		<div class="top"></div>
+   			<div class="left"></div>
+    		<div class="image">
+                	<img src="img/bg/2015-10-09-davideragusa-005.jpg" name="b1" onmouseover="mouseOver()" >
+            </div>
+   			<div class="right"></div>
+            <div class="down"><a href="login.html" onmouseover="mouseOut()" onmouseout="mouseOver()">Enter</a></div>
+  	  </div>
+	</div>
+</body>
+</html>

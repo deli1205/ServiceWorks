@@ -1,0 +1,403 @@
+<html>
+<script type="text/javascript">
+function myFunction() {
+    var x;
+    if (confirm("確定要新增此課程?") == true) {
+        x = "You pressed OK!";
+    } else {
+        x = "You pressed Cancel!";
+    }
+}
+
+function btnLikemouseOver()
+{
+document.b1.src="img/btnLike02.jpg"
+}
+
+function btnLikemouseOut()
+{
+document.b1.src="img/btnLike.jpg"
+}
+
+function like01a()
+{
+document.getElementById("like01").innerHTML="<img title=\"覺得喜歡\" src=\"img/btnLike02.jpg\" name=\"b1\" onClick=\"like01b()\">";
+}
+
+function like01b()
+{
+document.getElementById("like01").innerHTML="<img title=\"覺得喜歡\" src=\"img/btnLike.jpg\" name=\"b1\" onClick=\"like01a()\">";
+}
+
+function like02a()
+{
+document.getElementById("like02").innerHTML="<img title=\"覺得喜歡\" src=\"img/btnLike02.jpg\" name=\"b1\" onClick=\"like02b()\">";
+}
+
+function like02b()
+{
+document.getElementById("like02").innerHTML="<img title=\"覺得喜歡\" src=\"img/btnLike.jpg\" name=\"b1\" onClick=\"like02a()\">";
+}
+
+
+</script>
+
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>課程清單頁</title>
+<link href="style/style01.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<div class="wrap">
+    	<div id="classlist">
+  <!----        <img src="img/classList.PNG"> --->
+			<table>
+            	<tr>
+  					<td class="view">
+						<div><img src="img/圖片1.png"></div>
+                	</td>
+  					<td class="info">
+						<div class="title">ＭＭＬＡＢ</div>
+                        <div class="content">
+                        	<p>講者：陳大名　教授</p>
+                            <p>大綱：ＭＭ巧克力的製造流程介紹</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td id>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like01">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01a()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+            	<tr>
+  					<td class="view">
+						<div><img src="img/class002.png"> </div>
+                	</td>
+  					<td class="info">
+						<div class="title">服務科學概論</div>
+                        <div class="content">
+                        	<p>講者：彭勝龍 教授</p>
+                            <p>大綱：講述服務科學的基本概念與相關的應用和未來發展趨勢。</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like02">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like02a()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+				<tr>
+  					<td class="view">
+						<div><img src="img/cat.jpg"> </img></div>
+                	</td>
+  					<td class="info">
+						<div class="title">如何當個稱職的貓奴</div>
+                        <div class="content">
+                        	<p>講者：穿長靴的貓</p>
+                            <p>大綱：指導如何取悅家中的貓主人。</p>
+                        </div>
+                	</td>
+                    <td class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                <tr>
+  					<td class="view">
+						<div><img src="img/pc.jpg"></div>
+                	</td>
+  					<td class="info">
+						<div class="title">計算機概論</div>
+                        <div class="content">
+                        	<p>講者：Dr. PC</p>
+                            <p>大綱：介紹計算機的主要架構與內部軟硬體運作的知識。</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                <tr>
+  					<td class="view">
+						<div><img src="img/map.jpg"></div>
+                	</td>
+  					<td class="info">
+						<div class="title">世界地理</div>
+                        <div class="content">
+                        	<p>講者：麥哲倫　船長</p>
+                            <p>大綱：介紹世界各地的氣候、地形、人文</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                <tr>
+  					<td class="view">
+						<div><img src="img/cook.jpg"></div>
+                	</td>
+  					<td class="info">
+						<div class="title">食在很簡單</div>
+                        <div class="content">
+                        	<p>講者：中華特級廚師　－　小當家</p>
+                            <p>大綱：教導身為一名頂級廚師必要的技術</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                <tr>
+  					<td class="view">
+						<div><img src="img/robot.jpg"></div>
+                	</td>
+  					<td class="info">
+						<div class="title">成為真正的人</div>
+                        <div class="content">
+                        	<p>講者：Dr. Robot</p>
+                            <p>大綱：教導機器人如何變成真正的人類。</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                <tr>
+  					<td class="view">
+						<div><img src="img/fish.jpg"></div>
+                	</td>
+  					<td class="info">
+						<div class="title">魚說</div>
+                        <div class="content">
+                        	<p>講者：美人魚</p>
+                            <p>大綱：學習如何和魚類說話，魚類世界的相關禮儀。</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>                
+                <tr>
+  					<td class="view">
+						<div><img src="img/phone.jpg"> </div>
+                	</td>
+  					<td class="info">
+						<div class="title">行動裝置程式設計－基礎篇</div>
+                        <div class="content">
+                        	<p>講者：假博斯</p>
+                            <p>大綱：開發行動裝置程式的基礎教學</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                <tr>
+  					<td class="view">
+						<div><img src="img/app.jpg"> </div>
+                	</td>
+  					<td class="info">
+						<div class="title">行動裝置程式設計－進階篇</div>
+                        <div class="content">
+                        	<p>講者：假博斯</p>
+                            <p>大綱：行動裝置程式開發的深入教學，（需先上過基礎篇）</p>
+                        </div>
+                	</td>
+                    <td  class="button">
+						<div>
+							<table>
+            					<tr>
+  									<td>
+										<div><a href="http://203.145.205.71/3D_gallery/index1.html"><img title="開始上課" src="img/btnPlay.jpg"></a></div>
+                					</td>
+  									<td>
+										<div><img title="分享" src="img/btnShare.jpg"></div>
+            		    			</td>
+								</tr>
+                                <tr>
+  									<td>
+										<div><img onClick="myFunction()" title="加進課程清單" src="img/Add.jpg"></div>
+                					</td>
+  									<td id="like">
+										<img title="加入我的最愛" src="img/btnLike.jpg" name="b1" onClick="like01()">
+            		    			</td>
+								</tr>   
+                             </table>                     
+                         </div>
+                	</td>
+				</tr>
+                
+            </table>
+        </div>    
+	</div>
+</body>
+</html>

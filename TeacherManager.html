@@ -1,0 +1,95 @@
+<html>
+<!-------------------------------------------------------->
+<!---------------------Java script------------------------------->
+<!-------------------------------------------------------->
+<script language="javascript">
+function toEditUserInfo() {
+document.getElementById("content").innerHTML="<iframe src=\"UserInfo.html\"></iframe>";	
+}
+function toNewClass(){
+document.getElementById("content").innerHTML="<iframe src=\"TeacherBuildClass.html\"></iframe>";
+}
+function toClassList(){
+document.getElementById("content").innerHTML="<iframe src=\"TeacherClassList.html\"></iframe>";	
+}
+function toEdit(){
+document.getElementById("content").innerHTML="開發維護中";	
+}
+
+function Build3D(){
+document.getElementById("content").innerHTML="<iframe src=\"http://203.145.205.71/sculptgl-master/index.html\"></iframe>";	
+}
+
+function logout() {
+    var x;
+    if (confirm("確定登出?") == true) {
+        document.location.href="index.html";
+    } else {
+        x = "You pressed Cancel!";
+    }
+}
+
+</script>
+
+
+<!-------------------------------------------------------->
+<!---------------------Head------------------------------->
+<!-------------------------------------------------------->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>老師管理介面</title>
+<link href="style/style01.css" rel="stylesheet" type="text/css" id="css">
+</head>
+
+<!-------------------------------------------------------->
+<!---------------------Body------------------------------->
+<!-------------------------------------------------------->
+<body>
+	<div class="wrap">
+        	<div id="manager-bg">
+<!-----------------------標題區塊-------------------------->
+		<header>
+            <a href="TeacherManager.html">
+        		<img src="img/swc_logo.png">
+            </a>        
+            <div class="input">
+ <!---    		<input type="text" name="" /> ---->
+  <!---         <input type="button" value="Search" /> ---->
+            </div>
+<!-----          <p><a href="login.html">
+                        		<input class="btn-login" type="button" name="登出" value="登出" />
+                            </a><p/>   -------->
+     	</header>
+
+<!-----------------------橫選單-------------------------->        
+		<nav></nav>
+       	
+<!-----------------------左直表單-------------------------->
+        <ul id="menu">
+        	<div class="info">
+         	 		<img src="img/Penguins.jpg">
+                 <p>姓名: 陳偉銘</p>
+                 <p>身分: 老師</p>
+                 <p>生日: 1999.12.12</p>
+            </div>
+            <div>           
+          		<li onClick="toEditUserInfo()">編輯個人資料</li>
+          		<li onClick="toClassList()">我的課程</li>                
+          		<li onClick="toNewClass()">建立新課程</li>
+          		<li onClick="Build3D()">3D建模</li>
+                <li onClick="logout()">登出</li>
+    <!-----      		<li onClick="toEdit()">訊息通知</li>        -------->
+    <!----      		<li onClick="toEdit()">設定</li>  ---->              
+            </div>
+        </ul>
+        
+<!-----------------------內容區塊-------------------------->       	
+        <div id="content">
+        	<iframe src="welcome.html"></iframe>
+        </div>
+<!-----------------------底部相關資訊------------------------->
+       <!--- <div id="footer">底<div>--->
+       </div>
+    </div>
+</body>
+</html>
