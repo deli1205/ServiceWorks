@@ -1,0 +1,1477 @@
+@charset "utf-8";
+
+a {
+    color:#777777;
+	text-decoration:none;
+}
+
+.wrap{
+	width: 100%;
+	margin: 0 auto;
+	font-family: 微軟正黑體;
+	}
+body{
+	}
+
+/*------------------進場頁index-------------------*/
+#index{
+	width:100%;
+	height:100%;
+	}
+	
+#index .top{
+	width:100%;
+	height:5%;
+	background:#000;
+	}
+
+#index .left{
+	width:10%;
+	height:80%;
+	float:left;
+	background:#000;
+	}
+	
+#index .image{
+	width:80%;
+	height:80%;
+	float:left;
+	background:#222;
+	text-align:center;	
+	}
+	
+#index .image img{
+	width:auto;
+	height:100%;	
+	}
+	
+#index .right{
+	width:10%;
+	height:80%;
+	float:left;
+	background:#000;	
+	}
+#index .down{
+	width:100%;
+	height:15%;
+	background:#000;
+	clear:both;
+	text-align:center;
+	}
+
+#index .down a{
+	color:#FFF;
+	font-size:40px;
+	font-family:Verdana, Geneva, sans-serif;	
+	}
+
+
+/**----------操作版模------------**/
+
+#manager-bg{
+	 z-index:-9;
+	 width:100%;
+	 height:100%;
+	 background-image:url(../img/bg/kaboompics.com_Photos%20in%20the%20box.jpg);
+	 background-size:100% auto;
+	 background-attachment:fixed; 	
+	}
+	
+/* TOP */
+header{
+	height:80px;
+	border-radius:10px 10px 10px 10px;
+	background:rgba(100%,100%,100%,0.4);
+	}
+header img{
+	height:80%; 
+  	position: relative;
+  	left: 1%;
+  	top: 9px;
+	float:left;
+	}
+header .input{
+
+	}	
+header p{
+	float:right;
+	margin:0 0 10px 0;
+	}	
+
+	
+/* 橫選單 */	
+nav{
+	height:10px;	
+	}	
+/* 內容 */
+#content{
+	height:90%;
+	width:79%;
+	float:right;
+	margin: 0 1px 0 0;
+	border-radius:10px 10px 10px 10px;
+	}
+	
+#content iframe{
+	border-radius:10px 10px 10px 10px;
+	width:100%;
+	height:100%;
+	background:rgba(100%,100%,100%,0.3);
+	border-width:0px;
+	}
+	
+/* 直選單 */
+ul#menu{
+	height:500px;
+	width:20%;
+	padding: 0px 2px;
+	position: relative;
+	margin: 0px 0 10px 0; 
+	/*background:#CCC;*/
+	float:left;
+	}
+ul#menu .info{
+	width:100%;
+	padding: 7px 0;	 
+	background:rgba(100%,100%,100%,0.4);
+	border-radius:5px;
+	text-align:center; 
+	}
+ul#menu .info img{
+	padding: 5px 0;	
+	width:90%;
+	}
+ul#menu .info p{
+	margin: 1px 3% 2px 3%;
+	text-align:left; 
+	}
+
+ul#menu li{
+	width:100%;
+	margin:6px 0 0 0; 
+	padding: 6px 0;
+ 	text-align:center; 
+	background:rgba(100%,100%,100%,0.4);
+	border-radius:5px;
+	font-weight: 900;
+	}
+	
+/* 底*/	 
+#footer{
+	margin:10px 0 0 0; 
+	clear:both;
+	}/* CSS Document */
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------登入頁------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+#login-bg{
+	z-index:-9;
+	width:100%;
+	 height:100%;
+	 background-image:url(../img/bg/SW_Josh+Felise.jpg);
+	 background-size:100% 100%;
+	 background-attachment: scroll;	
+	}
+
+#space-left{
+	width:35%;
+	height:100%;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	text-align:center;
+	}
+
+#login{
+	width:30%;
+	height:100%;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	text-align:center;
+	}
+	
+#login p{
+	text-align:center;
+	color:#fff;
+	font-weight:500;
+	}
+	
+#login table{
+	width:100%;
+	height:400px;
+	text-align:center;
+	}
+
+#login table img{
+	width:99%;
+	height:auto;
+	border-style:solid;
+	border-width:2px;
+	border-color:#CCC;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	}
+
+#teacher{
+	width:33%;
+	height:auto;
+	text-align:center;
+	}
+	
+#student{
+	width:33%;
+	height:auto;
+	text-align:center;
+	}
+#admin{
+	width:33%;
+	height:auto;
+	text-align:center;
+	}	
+	
+#space-right{
+	width:35%;
+	height:100%;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF
+	float:left;
+	text-align:center;
+	}
+
+/*-----------------------------*/
+
+#login2{
+	width:30%;
+	height:100%;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	text-align:center;
+	}
+	
+#login2 p{
+	text-align:center;
+	color:#fff;
+	font-weight:500;
+	}
+	
+#login2 table{
+	width:100%;
+	height:400px;
+	text-align:center;
+	}
+
+#login2 table img{
+	width:99%;
+	height:auto;
+	background:#000;
+	text-align:center;
+	}
+	
+#login2 #teacher{
+	border-style:solid;
+	border-width:2px;
+	border-color:#CCC;
+	border-radius:10px 10px 10px 10px;
+	background-color:rgba(100%,100%,100%,0.9);
+	text-align:center;
+	}
+
+#login2 #teacher p{
+	color:#000;
+	}
+
+#login2 .btn-login{
+	border-style:solid;
+	border-width:2px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	background:#DDD;
+	font-family:Verdana, Geneva, sans-serif; 
+	}
+
+
+/*!----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+/*-----------------------編輯目錄頁---------------------------------*/
+/*----------------------------------------------------------------*/
+/*----------------------------------------------------------------*/
+
+
+
+
+#edittable{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+
+  }
+  
+#edittable .choiceword{
+	padding-top:20px; 
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+
+#edittable table{
+	position:absolute;
+  	left: 20%;
+  	top:  20%;
+	width:60%; 
+	height:60%; 
+	}
+	
+#edittable table tr{
+	height:30%;  
+	background:#FFFFFF;
+	
+	}
+	
+#edittable table tr td{ 
+	width:30%; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	}	
+
+#edittable table tr td img{
+	width:100%;
+	}	
+	
+	
+	
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------編輯頁控制模版------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+.choiceword{
+	padding-top:20px; 
+	text-align:center; 
+	color:#000000;
+	font-size:32px;
+	font:100;
+	}
+
+.btb{
+	margin:35% 0 0 0;
+	width:9%;
+	height:80px;
+	background:#333;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	text-align:center;
+	}
+	
+
+#btb p{
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:150%;
+	font-weight:700;
+	}
+#trun{
+	width:80%;
+	margin: 0 1% auto;
+	height:100%;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	}
+	
+	
+#trun iframe{
+	width:99%;
+	height:99%;
+	border-radius:10px 10px 10px 10px;
+	border-width:3px;
+	
+	}
+
+.btn{
+	margin:35% 0 0 0;
+	width:9%;
+	height:80px;
+	background:#333;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	text-align:center;
+	}
+	
+#btn{
+
+	}
+
+#btn p{
+	color:#FFFFFF;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:150% ;
+	font-weight:700;
+	}
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------編輯個人資訊------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+#edit-user-info{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	padding-top:20px; 
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+	
+#edit-user-info table{
+	width:100%;
+	}
+
+#edit-user-info table tr{	
+	}
+	
+#edit-user-info table tr td{
+	height:50px;
+	}
+	
+#edit-user-info table .label{
+	width:20%; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+
+#edit-user-info table .edit{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+	
+
+
+#edit-user-info table TextArea{
+	width:100%;
+	height:100%;
+	border-width:0;
+	}
+
+	
+#edit-user-info table .input-file input{
+	width:auto;
+	height:auto;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	border-color:#E0E0E0;
+	background:#EEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#edit-user-info table .edit-content{
+	width:auto;
+	height:500px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+
+#edit-user-info table .edit-image{
+	width:auto;
+	height:150px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	background:#FFF;
+	}
+
+#edit-user-info .edit-image img{
+	width:auto;
+	height:100%;
+	border-style:solid;
+	border-width:2px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF;
+	}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------編輯課程文字資訊1.0------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+/*
+#edit-info-data{
+
+	}
+	
+#edit-info-data table{
+	width:100%;
+	}
+
+#edit-info-data table tr{	
+	}
+	
+#edit-info-data table tr td{
+	height:50px;
+	}
+	
+#edit-info-data table .label{
+	width:20%; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#edit-info-data table .edit{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	}
+	
+#edit-info-data table input{
+	width:100%;
+	height:100%;
+	border-width:0;
+	}
+
+
+	
+#edit-info-data table .input-file input{
+	width:auto;
+	height:auto;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	border-color:#E0E0E0;
+	background:#EEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#edit-info-data table .edit-content{
+	width:auto;
+	height:500px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	} */
+	
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------編輯課程文字資訊2.0------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+#edit-info-data{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	float:left;
+	padding-top:20px; 
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+	
+#edit-info-data table{
+	width:100%;
+	}
+
+#edit-info-data table tr{	
+	}
+	
+#edit-info-data table tr td{
+	height:50px;
+	}
+	
+#edit-info-data table .label{
+	width:20%; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF;
+	}
+
+#edit-info-data table .edit{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF;
+	}
+	
+#edit-info-data table input{
+	width:100%;
+	height:100%;
+	border-width:0;
+	}
+
+
+
+
+
+#edit-info-data table TextArea{
+	width:100%;
+	height:100%;
+	border-width:0;
+	}
+
+	
+#edit-info-data table .input-file input{
+	width:auto;
+	height:auto;
+	float:left;
+	border-style:solid;
+	border-width:1px;
+	border-color:#E0E0E0;
+	background:#EEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#edit-info-data table .edit-content{
+	width:auto;
+	height:500px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF;
+	}
+
+#edit-info-data table .edit-image{
+	width:auto;
+	height:150px;
+	border-style:solid;
+	border-width:3px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	background:#FFF;
+	}
+
+#edit-info-data .edit-image img{
+	width:auto;
+	height:100%;
+	border-style:solid;
+	border-width:2px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	}
+	
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------編輯課程章節列表------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+#edit_chapter_list img{
+	width:99%;
+
+	}
+
+#edit_chapter_list{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	padding-top:20px; 
+	float:left;
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+	
+#edit_chapter_list table{
+	width:100%;
+	height:1200px;
+	}
+
+#edit_chapter_list table tr{	
+	}
+	
+#edit_chapter_list table tr td{
+	height:10%;	
+	}
+	
+#edit_chapter_list table .view{
+	width:120px; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+
+#edit_chapter_list table .info{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+
+#edit_chapter_list table .button{
+	width:120px; 
+	text-align:center;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px; 
+		background:#FFF;
+	}
+	
+#edit_chapter_list .button table{
+	width:100%;
+	height:100%;  
+	}
+	
+#edit_chapter_list .button table tr{
+	}
+
+#edit_chapter_list .button table tr td{
+	height:100%;
+	text-align:center;
+	}
+	
+#edit_chapter_list .info .title{
+	width:100%;
+	height:30%;
+  	background:#EEEEEE;
+	font-size:18px;
+	font-weight:bold;
+	}
+	
+#edit_chapter_list table .info .content{
+	width:100%;
+	height:60%;
+  	background:#FFFFFF;
+	font-size:12px;
+	}
+	
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------影片設定------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+#video-setting img{
+	width:99%;
+
+	}
+
+#video-setting{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	padding-top:20px; 
+	float:left;
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+	
+#video-setting table{
+	padding-top:50px;
+	width:100%;
+	height:300px;
+	}
+
+#video-setting table tr{	
+	}
+	
+#video-setting table tr td{
+	height:10%;
+	}
+	
+#video-setting table .label{
+	width:120px; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+
+#video-setting table .edit{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+
+#video-setting table .checkbox{
+	width:120px; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+		background:#FFF;
+	}
+	
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------檔案管理------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+#edit-file img{
+	width:99%;
+
+	}
+
+#edit-file{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	padding-top:20px; 
+	float:left;
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+	
+#edit-file table{
+	padding-top:50px;
+	width:100%;
+	height:300px;
+	}
+
+#edit-file table tr{	
+	}
+	
+#edit-file table tr td{
+	height:10%;
+	}
+	
+#edit-file table .label{
+	width:120px; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#edit-file table .edit{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------編輯課程章節列表------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+#edit_ar_list img{
+	width:99%;
+
+	}
+
+#edit_ar_list {
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	padding-top:20px; 
+	float:left;
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+	
+#edit_ar_list table{
+	width:100%;
+	height:1200px;
+	}
+
+#edit_ar_list table tr{	
+	}
+	
+#edit_ar_list table tr td{
+	height:10%;	
+	}
+	
+#edit_ar_list table .view{
+	width:120px; 
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF;
+	}
+
+#edit_ar_list table .info{
+	width:auto;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF;
+	}
+
+#edit_ar_list table .button{
+	width:120px; 
+	text-align:center;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	background:#FFF; 
+	}
+	
+#edit_ar_list .button table{
+	width:99%;
+	height:100%;  
+	}
+	
+#edit_ar_list .button table tr{
+	width:50%
+	}
+
+#edit_ar_list .button table tr td{
+	height:10%;
+	}
+	
+#edit_ar_list .button table tr td img{
+	width:50px;
+	height:50px;
+	}
+	
+#edit_ar_list .info .title{
+	width:100%;
+	height:30%;
+  	background:#EEEEEE;
+	font-size:18px;
+	font-weight:bold;
+	}
+	
+#edit_ar_list table .info .content{
+	width:100%;
+	height:60%;
+  	background:#FFFFFF;
+	font-size:12px;
+	}
+	
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------AR圖片多選擇題(MCQ)------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+
+
+#image-mcq{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	padding-top:20px; 
+	float:left;
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+#image-mcq img{
+	width:98%;
+	height:auto;
+	}
+
+#image-mcq .choiceword{
+	padding-top:20px; 
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	}
+
+#image-mcq table{
+	width:100%;
+	height:500px;
+	}
+	
+#image-mcq .info{
+	width:100%;
+	height:100px;
+	}
+	
+#image-mcq .info tr{
+	height:50px;
+	}
+	
+#image-mcq .info .label{
+	width:40px;
+	text-align:center;
+	background-color:rgba(100%,100%,100%,0.9); 
+	}
+#image-mcq .info .edit{
+	width:40px;
+	background-color:rgba(100%,100%,100%,0.9);
+	}
+	
+#image-mcq .info .edit input{
+	width:600px;
+	height:50px;
+	border-style:solid;
+	border-width:0px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+
+#image-mcq p{
+	padding-top:20px; 
+	text-align:center; 
+	color:#FFF;
+	font-size:30px;
+	font:100;
+	}
+	
+#image-mcq table tr{
+	height:150px;
+	}
+
+#image-mcq table .check{
+	height:60px;
+	}	
+		
+#image-mcq table tr td{
+	width:20%;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	background-color:rgba(100%,100%,100%,0.9);
+	}
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------AR圖片多選擇題(MCQ) 試做------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+#image-mcq-test img{
+	width:98%;
+	height:auto;
+	}
+
+#image-mcq-test{
+	width:80%;
+	margin: 0 1% auto;
+	border-radius:10px 10px 10px 10px;
+	padding-top:20px; 
+	float:left;
+	text-align:center; 
+	color:#aaaaaa;
+	font-size:32px;
+	font:100;
+	}
+
+#image-mcq-test .choiceword{
+	padding-top:20px; 
+	text-align:center; 
+	color:#FFFFFF;
+	font-size:32px;
+	}
+	
+#image-mcq-test p{
+	padding-top:20px; 
+	text-align:center; 
+	color:#FFFFFF;
+	font-size:30px;
+	font:100;
+	}
+
+#image-mcq-test table{
+	width:100%;
+	height:640px;
+	}
+	
+#image-mcq-test .info table{
+	width:100%;
+	height:100px;
+	}
+	
+#image-mcq-test.info tr{
+	height:50px;
+	}
+	
+#image-mcq-test .info .label{
+	width:40px;
+	text-align:center;
+	background-color:rgba(100%,100%,100%,0.8); 
+	}
+#image-mcq-test .info .edit{
+	width:400px;
+	background-color:rgba(100%,100%,100%,0.8);
+	}
+	
+#image-mcq-test table tr{
+	height:150px;
+	}
+
+#image-mcq-test table .space{
+	height:20px;
+	}
+#image-mcq-test table tr td{
+	width:20%;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEEEEE;
+	border-radius:10px 10px 10px 10px;
+	background-color:rgba(100%,100%,100%,0.9);
+	}
+
+#image-mcq-test table .check{
+	height:60px;
+	background-color:#666;
+	border-color:#555555;
+	}	
+	
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------課程列表------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+
+#classlist img{
+	width:99%;
+
+	}
+
+#classlist {
+	margin:2% 0 0 10%;
+	}
+	
+#classlist table{
+	width:80%;
+	height:1200px;
+	}
+
+#classlist table tr{	
+	}
+	
+#classlist table tr td{
+	height:10%;	
+	}
+	
+#classlist table .view{
+	width:120px; 
+	background:#FFF;
+	text-align:center; 
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#classlist table .info{
+	width:auto;
+	background:#FFF;
+	border-style:solid;
+	border-width:3px;
+	border-color:#EEE;
+	border-radius:10px 10px 10px 10px;
+	}
+
+#classlist table .button{
+	width: 120px;
+	background: #FFF;
+	text-align: justify;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #EEE;
+	border-radius: 10px 10px 10px 10px;
+	}
+	
+#classlist table .button table{
+	width:100%;
+	height:100%;  
+	}
+	
+#classlist table .button table tr{
+	}
+
+#classlist table .button table tr td{
+	height:100%;
+	text-align:center;
+	}
+	
+#classlist table .info .title{
+	width:100%;
+	height:30%;
+  	background:#DDD;
+	font-size:18px;
+	font-weight:bold;
+	float:inherit;
+	}
+	
+#classlist table .info .content{
+	width:100%;
+	height:50%;
+  	background:#FFFFFF;
+	font-size:12px;
+	}
+	
+	
+	
+/**********Welcome*************/
+#welcome{
+	width:100%;
+	height:auto;
+	
+	}
+
+#welcome-bg{
+	 z-index:-9;
+	 width:100%;
+	 height:100%;
+	 background-size:100% auto;
+	 background-attachment:fixed; 	
+	}
+
+
+/*----------------------------------------------------------------
+----------------------------------------------------------------
+-----------------------管理者模式------------------------------------
+----------------------------------------------------------------
+----------------------------------------------------------------*/
+#setyear{
+	color:white;
+	height:50px;
+}
+
+#status1{
+	height:500px;
+	width:7%;
+	padding: 0px 2px;
+	float:left;
+	}
+
+#txt1{
+	width:67%;
+	padding: 0px 1%;
+	}
+	
+#btn1{
+	width:30%;
+	padding: 0px 1%;
+	}
+
+#status1 p{
+	width:100%;
+
+	}	
+
+#status1 li{
+	color:black;
+	list-style-type:none;
+	width:100%;
+	margin:6px 0 0 0; 
+	padding: 6px 0;
+ 	text-align:center; 
+	background:rgba(100%,100%,100%,1.0);
+	border-radius:5px;
+	font-weight: 900;
+	}
+
+#status2{
+	width:auto;
+	padding: 0px 2px;
+	float:left;
+	}
+	
+#status2 table{
+	margin:6px 0 0 0; 
+	color:black;
+	width:auto;
+	}
+#status2 table tr{
+		height:50px;
+		background:rgba(100%,100%,100%,1.0);
+		
+	}
+#status2 table tr td{
+	margin:6px 0 0 0;
+	width:auto;	
+	border-radius:2px;
+	}
+#status2 table tr th{
+	width:auto;
+	margin:6px 0 0 0; 
+	background:rgba(100%,100%,100%,1.0);
+	border-radius:2px;
+	}
+#status2 input{
+	width:100%;
+	height:100%;
+	border-width:1px;
+	font-size:15px;
+	}
+#status2 table tr th img{
+	height:6%;
+}
+#status2 table tr td img{
+	height:6%;
+}		
+
+	
+#status3{
+	width:auto;
+	padding: 0px 2px;
+	float:left;
+	}
+	
+#status3 table{
+	margin:6px 0 0 0; 
+	color:black;
+	width:100%;
+	}
+#status3 table tr{
+		height:50px;
+		background:rgba(100%,100%,100%,1.0);
+	}
+#status3 table tr td{
+	margin:6px 0 0 0; 
+	border-radius:2px;
+
+	}
+#status3 table tr th{
+	width:auto;
+	margin:6px 0 0 0; 
+	background:rgba(100%,100%,100%,1.0);
+	border-radius:2px;
+	}
+#status3 #space .space{
+	width:auto;
+	margin:6px 0 0 0; 
+	background:none;
+	}
+#status3 #space{
+	width:auto;
+	margin:6px 0 0 0; 
+	background:none;
+	}
+#status3 #editpanel{
+	width:100%;
+	margin:6px 0 0 0; 
+	padding:3px 6px;
+	border-width:5px;
+	background:white;
+	border-radius:6px;
+	}
+#status3 input{
+	width:100%;
+	}
+#status3 select{
+	width:100%;
+	}
+#status3 li{
+	color:black;
+	list-style-type:none;
+	width:100%;
+	margin:6px 0 0 0; 
+	padding: 6px 0;
+	font-weight: 900;
+	}
+#status3 table tr th img{
+	height:6%;
+}
+#status3 table tr td img{
+	height:6%;
+}	
+#status3 .addbtn{
+	text-align:center;
+}
+
+#status3 #addbtn{
+	width:20%;
+	font-weight:900px;
+	font-family:"Courier New", Courier, monospace;
+	border-style:solid;
+	border-width:2px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	background:#DDD;
+}
+	
+
+#status4{
+	width:auto;
+	padding: 0px 2px;
+	float:left;
+	}
+#status4 li{
+	color:black;
+	list-style-type:none;
+	width:100%;
+	margin:6px 0 0 0; 
+	padding: 6px 0;
+	font-weight: 900;
+	}
+#status4 #editpanel{
+	width:100%;
+	margin:6px 0 0 0; 
+	padding:3px 6px;
+	border-width:5px;
+	background:white;
+	border-radius:6px;
+	}
+#status4 .addbtn{
+	text-align:center;
+}	
+#status4 #addbtn{
+	width:20%;
+	font-weight:900px;
+	font-family:"Courier New", Courier, monospace;
+	border-style:solid;
+	border-width:2px;
+	border-color:#DDD;
+	border-radius:10px 10px 10px 10px;
+	text-align:center;
+	background:#DDD;
+}
